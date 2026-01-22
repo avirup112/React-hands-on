@@ -54,6 +54,22 @@ const MyProjects = () => {
                                         </div>
                                     )}
                             </div>
+                            {/* Content */}
+                            <div className='p-4 text-white bg-linear-180 from-transparent group-hover:from-indigo-950 to-transparent transition-colors'>
+                                <div className='flex items-start justify-between'>
+                                    <h2 className='text-lg font-medium line-clamp-2'>{project.name}</h2>
+                                    <button className='px-2.5 py-0.5 mt-2 ml-2 text-xs bg-gray-800 border border-gray-700 rounded-full'>Website</button>
+                                </div>
+                                <p className = 'text-gray-400 mt-1 text-sm line-clamp-2'>{project.initial_prompt}</p>
+
+                                <div onClick={(e)=>e.stopPropagation()} className='flex justify-between items-center mt-6'>
+                                    <span className='text-xs text-gray-500'>{new Date(project.createdAt).toLocaleDateString()}</span>
+                                    <div className='flex gap-3 text-white text-sm'>
+                                        <button>Preview</button>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     ))}
                 </div>
